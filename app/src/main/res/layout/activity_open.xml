@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:orientation="vertical"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".activity.equipment.OpenActivity">
+    <androidx.appcompat.widget.Toolbar
+        android:fitsSystemWindows="true"
+        android:background="#F4511E"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:id="@+id/ll_return_openactivity"
+            android:gravity="center_vertical"
+            android:layout_width="50dp"
+            android:layout_height="50dp">
+        <ImageView
+            android:src="@mipmap/fanhui"
+            android:layout_width="16dp"
+            android:layout_height="20dp" />
+        </LinearLayout>
+        <TextView
+            android:layout_gravity="center"
+            android:text="设备启动"
+            android:textColor="#FFFFFF"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </androidx.appcompat.widget.Toolbar>
+
+    <LinearLayout
+        android:background="#F5F5F5"
+        android:layout_weight="1"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"></LinearLayout>
+    <LinearLayout
+        android:gravity="center_horizontal"
+        android:orientation="vertical"
+        android:layout_weight="1"
+        android:layout_width="match_parent"
+        android:layout_height="0dp">
+        <TextView
+            android:layout_marginTop="15dp"
+            android:layout_gravity="center"
+            android:text="1、请打开电源键，将设备开启"
+            android:textColor="#4B4E4E"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <TextView
+            android:layout_marginTop="5dp"
+            android:layout_gravity="center"
+            android:text="电源键的位置可以在说明书上找到哦"
+            android:textColor="#4B4E4E"
+            android:textSize="14sp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <Button
+            android:id="@+id/btn_start_openactivity"
+            android:background="@drawable/loginbtn"
+            android:text="已经启动设备啦"
+            android:textColor="#FFFFFF"
+            android:textSize="17sp"
+            android:layout_gravity="center"
+            android:layout_marginTop="40dp"
+            android:layout_width="320dp"
+            android:layout_height="50dp" />
+
+        <View
+            android:layout_weight="1"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"></View>
+        <TextView
+            android:id="@+id/tv_query_openactivity"
+            android:layout_marginBottom="30dp"
+            android:text="如何开启设备？"
+            android:textColor="#666666"
+            android:textSize="15sp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+</LinearLayout>

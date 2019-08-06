@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:orientation="vertical"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activity.equipment.NetworkSettingsActivity">
+    <androidx.appcompat.widget.Toolbar
+        android:fitsSystemWindows="true"
+        android:background="#F4511E"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:id="@+id/ll_return_settings"
+            android:gravity="center_vertical"
+            android:layout_width="50dp"
+            android:layout_height="50dp">
+            <ImageView
+                android:src="@mipmap/fanhui"
+                android:layout_width="16dp"
+                android:layout_height="20dp" />
+        </LinearLayout>
+        <TextView
+            android:layout_gravity="center"
+            android:text="配置设备网络"
+            android:textColor="#FFFFFF"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+    </androidx.appcompat.widget.Toolbar>
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:layout_marginTop="35dp"
+            android:padding="5dp"
+            android:background="@drawable/ll_networkforhotspot"
+            android:orientation="horizontal"
+            android:layout_marginHorizontal="40dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:id="@+id/tv_wifi_settings"
+                android:textColor="#F4511E"
+                android:textSize="18sp"
+                android:gravity="center"
+                android:text="使用wifi网络"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content" />
+            <View
+                android:background="#E6E6E6"
+                android:layout_width="1dp"
+                android:layout_height="match_parent"></View>
+            <TextView
+                android:id="@+id/tv_hotspot_settings"
+                android:textSize="18sp"
+                android:gravity="center"
+                android:text="使用手机热点"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+
+        <TextView
+            android:layout_marginVertical="40dp"
+            android:textColor="#252424"
+            android:textSize="22sp"
+            android:gravity="center"
+            android:text="2、请设置你的无线信息"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+    <LinearLayout
+        android:background="@drawable/ll_wifi"
+        android:layout_marginHorizontal="40dp"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="50dp">
+        <TextView
+            android:layout_marginLeft="5dp"
+            android:textColor="#3D3B3B"
+            android:textSize="22sp"
+            android:gravity="center_vertical"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:text="WiFi: "/>
+    <TextView
+        android:maxLines="1"
+        android:ellipsize="end"
+        android:layout_marginLeft="10dp"
+        android:textColor="#000000"
+        android:textSize="18sp"
+        android:gravity="center_vertical"
+        android:layout_weight="1"
+        android:id="@+id/tv_wifi_name"
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+       />
+    <Spinner
+        android:id="@+id/spinner_wifi_setting"
+        android:layout_width="50dp"
+        android:layout_height="50dp"></Spinner>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_marginTop="15dp"
+        android:background="@drawable/ll_wifi"
+        android:layout_marginHorizontal="40dp"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="50dp">
+        <TextView
+            android:layout_marginLeft="5dp"
+            android:textColor="#3D3B3B"
+            android:textSize="22sp"
+            android:gravity="center_vertical"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:text="密码: "/>
+        <EditText
+            android:background="@null"
+            android:inputType="textPassword"
+            android:id="@+id/tv_wifi_passwrod"
+            android:hint="请输入密码"
+            android:layout_marginLeft="10dp"
+            android:textColor="#000000"
+            android:textSize="22sp"
+            android:gravity="center_vertical"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+           />
+    </LinearLayout>
+
+        <Button
+            android:id="@+id/btn_new_settings"
+            android:background="@drawable/settingbtn"
+            android:layout_marginTop="30dp"
+            android:layout_gravity="center"
+            android:text="下一步"
+            android:textSize="15sp"
+            android:textColor="#ffffff"
+            android:layout_width="320dp"
+            android:layout_height="45dp" />
+    </LinearLayout>
+    <View
+        android:layout_weight="1"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"></View>
+    <TextView
+        android:layout_gravity="center"
+        android:id="@+id/tv_query_settings"
+        android:layout_marginBottom="30dp"
+        android:text="找不到Wi-Fi怎么办？？"
+        android:textColor="#666666"
+        android:textSize="15sp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+</LinearLayout>

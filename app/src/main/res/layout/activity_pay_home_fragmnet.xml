@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:orientation="vertical"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activity.PayHomeFragmnetActivity">
+    <androidx.appcompat.widget.Toolbar
+        android:fitsSystemWindows="true"
+        android:background="#F4511E"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:id="@+id/ll_return_pay"
+            android:gravity="center_vertical"
+            android:layout_width="60dp"
+            android:layout_height="50dp">
+            <ImageView
+                android:src="@mipmap/fanhui"
+                android:layout_width="16dp"
+                android:layout_height="20dp" />
+        </LinearLayout>
+    </androidx.appcompat.widget.Toolbar>
+
+    <LinearLayout
+        android:layout_marginTop="150dp"
+        android:gravity="center_horizontal"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <ImageView
+            android:src="@mipmap/sebeiweihu2"
+            android:layout_width="68dp"
+            android:layout_height="68dp" />
+        <TextView
+            android:layout_marginTop="20dp"
+            android:textColor="#333333"
+            android:textSize="18sp"
+            android:text="支付成功"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <LinearLayout
+            android:layout_marginTop="10dp"
+            android:gravity="center_horizontal"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:id="@+id/tv_sum_pay"
+                android:text="3"
+                android:textSize="13sp"
+                android:textColor="#F4511E"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <TextView
+                android:text="秒后自动跳转进入学习"
+                android:textSize="13sp"
+                android:textColor="#999999"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+        <Button
+            android:id="@+id/btn_into_pay"
+            android:layout_marginTop="40dp"
+            android:background="@drawable/paybtn"
+            android:text="立即进入"
+            android:textSize="14sp"
+            android:textColor="#F75001"
+            android:layout_width="114dp"
+            android:layout_height="36dp" />
+    </LinearLayout>
+
+
+</LinearLayout>

@@ -1,0 +1,638 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <com.example.meetthebabyapp.view.StatusBarHeightView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:use_type="use_height"></com.example.meetthebabyapp.view.StatusBarHeightView>
+
+    <ScrollView
+        android:scrollbars="none"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#FCF8F8">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="300dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@mipmap/shouye4"
+                    android:fitsSystemWindows="true"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="220dp"
+                        android:layout_marginHorizontal="20dp"
+                        android:layout_marginTop="20dp"
+                        android:orientation="vertical">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <de.hdodenhof.circleimageview.CircleImageView
+                                android:id="@+id/cirview_head_home"
+                                android:layout_width="50dp"
+                                android:layout_height="50dp"
+                                android:src="@mipmap/baobaoxinxi3" />
+
+                            <LinearLayout
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="10dp"
+                                android:layout_weight="1"
+                                android:orientation="vertical">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="我的好朋友可儿(离线)"
+                                    android:textColor="#FFFFFF"
+                                    android:textSize="16sp"
+                                    android:textStyle="bold" />
+
+                                <LinearLayout
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:orientation="horizontal">
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="电量：35%"
+                                        android:textColor="#FFFFFF"
+                                        android:textSize="12sp" />
+                                    <ImageView
+                                        android:layout_width="17dp"
+                                        android:layout_height="17dp"
+                                        android:layout_marginLeft="11dp" />
+                                </LinearLayout>
+                            </LinearLayout>
+                            <ImageView
+                                android:layout_marginRight="20dp"
+                                android:src="@mipmap/gerenzhongxin12"
+                                android:layout_width="21dp"
+                                android:layout_height="21dp" />
+                            <ImageView
+                                android:src="@mipmap/yingyuebofan2"
+                                android:layout_width="21dp"
+                                android:layout_height="21dp" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="32dp"
+                            android:layout_marginTop="15dp"
+                            android:background="@drawable/search"
+                            android:gravity="center"
+                            android:orientation="horizontal">
+
+                            <ImageView
+                                android:layout_width="16dp"
+                                android:layout_height="16dp"
+                                android:layout_marginRight="8dp"
+                                android:src="@mipmap/shouye8" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="今天想听什么"
+                                android:textColor="#FFFFFF"
+                                android:textSize="12sp" />
+                        </LinearLayout>
+                    </LinearLayout>
+                </LinearLayout>
+                <!--轮播图-->
+                <com.zhouwei.mzbanner.MZBannerView
+                    android:id="@+id/banner"
+                    android:layout_width="match_parent"
+                    android:layout_height="160dp"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginTop="10dp"
+                    app:canLoop="true"
+                    app:indicatorAlign="center"
+                    app:indicatorPaddingLeft="10dp"
+                    app:open_mz_mode="true" />
+            </RelativeLayout>
+
+            <LinearLayout
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <Button
+                    android:id="@+id/btn_text1"
+                    android:text="1"
+                    android:layout_width="60dp"
+                    android:layout_height="wrap_content" />
+                <Button
+                    android:id="@+id/btn_text2"
+                    android:text="2"
+                    android:layout_width="60dp"
+                    android:layout_height="wrap_content" />
+                <Button
+                    android:id="@+id/btn_text3"
+                    android:text="3"
+                    android:layout_width="60dp"
+                    android:layout_height="wrap_content" />
+                <Button
+                    android:id="@+id/btn_text4"
+                    android:text="4"
+                    android:layout_width="60dp"
+                    android:layout_height="wrap_content" />
+                <Button
+                    android:id="@+id/btn_text5"
+                    android:text="5"
+                    android:layout_width="60dp"
+                    android:layout_height="wrap_content" />
+
+            </LinearLayout>
+
+            <!--温馨提示-->
+            <LinearLayout
+                android:id="@+id/ll_alert_home"
+                android:visibility="gone"
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="15dp"
+                android:layout_marginTop="20dp"
+                android:background="#FFF9F7">
+                <TextView
+                    android:layout_marginTop="30dp"
+                    android:gravity="center"
+                    android:textColor="#333333"
+                    android:textSize="17sp"
+                    android:text="温馨提示"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+                <TextView
+                    android:layout_marginTop="5dp"
+                    android:gravity="center"
+                    android:textColor="#333333"
+                    android:textSize="13sp"
+                    android:text="您当前还未绑定全求鹦，会影响正常学习"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+                <LinearLayout
+                    android:layout_marginVertical="25dp"
+                    android:layout_marginHorizontal="25dp"
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <Button
+                        android:id="@+id/btn_getdevice_home"
+                        android:background="@drawable/btnsound2"
+                        android:text="获取设备"
+                        android:textColor="#F4511E"
+                        android:textSize="15sp"
+                        android:layout_width="120dp"
+                        android:layout_height="44dp" />
+                    <View
+                        android:layout_weight="1"
+                        android:layout_width="0dp"
+                        android:layout_height="1dp"></View>
+                    <Button
+                        android:id="@+id/btn_fvbdevice_home"
+                        android:background="@drawable/btnsound"
+                        android:text="去绑定设备"
+                        android:textColor="#FFFFFF"
+                        android:textSize="15sp"
+                        android:layout_width="120dp"
+                        android:layout_height="44dp" />
+                </LinearLayout>
+            </LinearLayout>
+            <!--温馨提示-->
+
+
+            <!--立即测试-->
+            <LinearLayout
+                android:id="@+id/ll_test_home"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="15dp"
+                android:layout_marginTop="20dp"
+                android:background="#FFFFFF"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="20dp"
+                    android:src="@mipmap/shouyezhuantai1" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15dp"
+                    android:gravity="center"
+                    android:text="您暂未进行问答测试"
+                    android:textColor="#333333"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:gravity="center"
+                    android:text="进行测试定级后即可推送专属学习任务"
+                    android:textColor="#999999"
+                    android:textSize="13sp"
+                    android:textStyle="bold" />
+
+                <Button
+                    android:id="@+id/btn_purpletext"
+                    android:layout_width="285dp"
+                    android:layout_height="50dp"
+                    android:layout_gravity="center"
+                    android:layout_marginVertical="25dp"
+                    android:background="@drawable/homebtn"
+                    android:gravity="center"
+                    android:orientation="horizontal"
+                    android:text="立即测试"
+                    android:textColor="#FFFFFF" />
+            </LinearLayout>
+            <!--立即测试-->
+
+
+            <!--学习任务-->
+            <LinearLayout
+                android:id="@+id/ll_task_home"
+                android:visibility="gone"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="15dp"
+                android:layout_marginTop="20dp"
+                android:background="#FFFFFF"
+                android:orientation="vertical">
+
+                <FrameLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="20dp">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="10dp"
+                        android:layout_gravity="bottom"
+                        android:background="#FFEB3B" />
+
+                    <TextView
+                        android:id="@+id/tv_title_home"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="您今日有新的学习任务"
+                        android:textColor="#333333"
+                        android:textSize="20sp"
+                        android:textStyle="bold" />
+                </FrameLayout>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:gravity="center"
+                    android:text="每日学习打卡更有鹦鹉币奖励，明天也要坚持喔"
+                    android:textColor="#999999"
+                    android:textSize="13sp" />
+
+                <ImageView
+                    android:layout_width="145dp"
+                    android:layout_height="110dp"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="25dp"
+                    android:src="@mipmap/shouye2" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="40dp"
+                    android:layout_marginTop="10dp"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="当前等级："
+                            android:textSize="15sp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="L2"
+                            android:textColor="#FF5722"
+                            android:textSize="15sp" />
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="0dp"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"></View>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="学习任务："
+                            android:textSize="15sp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="DAY 01"
+                            android:textColor="#FF5722"
+                            android:textSize="15sp" />
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+
+
+            <!--200/开始学习-->
+            <LinearLayout
+                android:id="@+id/ll_start_home"
+                android:visibility="gone"
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:layout_marginHorizontal="15dp"
+                android:background="#FFFFFF"
+                android:gravity="center">
+
+                <LinearLayout
+                    android:layout_width="285dp"
+                    android:layout_height="50dp"
+                    android:layout_gravity="center"
+                    android:background="@drawable/btnsound"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+                    <LinearLayout
+                        android:id="@+id/ll_textforsumgone_home"
+                        android:orientation="horizontal"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+                    <ImageView
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:background="@mipmap/yueke4" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:text="200"
+                        android:textColor="#FFFFFF"
+                        android:textSize="20sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:text="/"
+                        android:textColor="#FFFFFF"
+                        android:textSize="20sp"
+                        android:textStyle="bold" />
+                    </LinearLayout>
+                    <TextView
+                        android:id="@+id/tv_start_home"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="开始学习"
+                        android:textColor="#FFFFFF"
+                        android:textSize="20sp"
+                        android:textStyle="bold" />
+                </LinearLayout>
+            </LinearLayout>
+            <!--200/开始学习-->
+
+
+            <!--接下来请继续进行复习或参加测试吧-->
+
+            <LinearLayout
+                android:id="@+id/ll_then_home"
+                android:orientation="vertical"
+                android:gravity="center"
+                android:layout_marginHorizontal="15dp"
+                android:layout_width="match_parent"
+                android:layout_height="100dp">
+                <View
+                    android:background="#FFFFFF"
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"></View>
+            <TextView
+                android:visibility="visible"
+                android:layout_width="match_parent"
+                android:layout_height="80dp"
+                android:layout_marginTop="1dp"
+                android:background="#FFFFFF"
+                android:gravity="center"
+                android:text="接下来请继续进行复习或参加测试吧！"
+                android:textColor="#333333"
+                android:textSize="15sp"></TextView>
+            </LinearLayout>
+            <!--接下来请继续进行复习或参加测试吧-->
+
+            <!--立即复习立即测试-->
+            <LinearLayout
+                android:visibility="gone"
+                android:id="@+id/ll_reviewfortext_home"
+                android:orientation="horizontal"
+                android:layout_marginTop="10dp"
+                android:layout_marginHorizontal="15dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <androidx.cardview.widget.CardView
+                    app:cardUseCompatPadding="true"
+                    app:cardCornerRadius="10dp"
+                    cardElevation="8dp"
+                    android:layout_weight="1"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content">
+                        <LinearLayout
+                            android:gravity="center"
+                            android:orientation="vertical"
+                            android:background="@mipmap/shouye12"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+                            <TextView
+                                android:layout_marginTop="25dp"
+                                android:layout_marginHorizontal="20dp"
+                                android:textColor="#FFFFFF"
+                                android:textStyle="bold"
+                                android:textSize="16sp"
+                                android:text="复习知识可以记\n得更牢固喔~"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content" />
+                            <TextView
+                                android:layout_marginTop="10dp"
+                                android:layout_marginHorizontal="20dp"
+                                android:textColor="#FFFFFF"
+                                android:textStyle="bold"
+                                android:textSize="22sp"
+                                android:text="DAY 01"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content" />
+                            <Button
+                                android:id="@+id/btn_review_home"
+                                android:layout_marginTop="10dp"
+                                android:background="@drawable/btnsound3"
+                                android:text="立即复习"
+                                android:textColor="#FFFFFF"
+                                android:layout_marginHorizontal="20dp"
+                                android:layout_width="match_parent"
+                                android:layout_height="30dp" />
+                        </LinearLayout>
+                </androidx.cardview.widget.CardView>
+                <androidx.cardview.widget.CardView
+                    android:layout_marginLeft="10dp"
+                    app:cardUseCompatPadding="true"
+                    app:cardCornerRadius="10dp"
+                    cardElevation="8dp"
+                    android:layout_weight="1"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content">
+                    <LinearLayout
+                        android:gravity="center"
+                        android:orientation="vertical"
+                        android:background="@mipmap/shouye11"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+                        <TextView
+                            android:layout_marginTop="25dp"
+                            android:layout_marginHorizontal="20dp"
+                            android:textColor="#FFFFFF"
+                            android:textStyle="bold"
+                            android:textSize="16sp"
+                                android:text="测试自己今日的\n学习成果吧~"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content" />
+                        <TextView
+                            android:layout_marginTop="10dp"
+                            android:layout_marginHorizontal="20dp"
+                            android:textColor="#FFFFFF"
+                            android:textStyle="bold"
+                            android:textSize="22sp"
+                            android:text="DAY 01"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content" />
+                        <Button
+                            android:id="@+id/btn_text_home"
+                            android:layout_marginTop="10dp"
+                            android:background="@drawable/btnsound4"
+                            android:text="立即测试"
+                            android:textColor="#FFFFFF"
+                            android:layout_marginHorizontal="20dp"
+                            android:layout_width="match_parent"
+                            android:layout_height="30dp" />
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+            </LinearLayout>
+            <!--立即复习立即测试-->
+
+
+            <!--名师约课-->
+            <LinearLayout
+                android:background="#F8F6F6"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+            <androidx.cardview.widget.CardView
+                android:visibility="visible"
+                android:id="@+id/cardview_teacher_home"
+                android:layout_gravity="center"
+                android:layout_marginHorizontal="15dp"
+                app:cardCornerRadius="10dp"
+                cardElevation="8dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <ImageView
+                    android:adjustViewBounds="true"
+                    android:layout_gravity="center"
+                    android:src="@mipmap/shouye10"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+            </androidx.cardview.widget.CardView>
+            </LinearLayout>
+            <!--名师约课-->
+
+
+            <!--最新动态-->
+            <LinearLayout
+              android:background="#FFFFFF"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="50dp">
+                <FrameLayout
+                    android:layout_marginHorizontal="18dp"
+                    android:layout_weight="1"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content">
+                    <View
+                        android:layout_gravity="bottom"
+                        android:background="#FFF000"
+                        android:layout_width="90dp"
+                        android:layout_height="10dp"></View>
+                    <TextView
+                        android:textStyle="bold"
+                        android:textSize="20sp"
+                        android:textColor="#333333"
+                        android:text="最新动态"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+                </FrameLayout>
+                <LinearLayout
+                    android:id="@+id/ll_getmore_home"
+                    android:layout_marginHorizontal="18dp"
+                    android:orientation="horizontal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:layout_marginRight="5dp"
+                        android:text="更多"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+                    <ImageView
+                        android:src="@mipmap/shouye5"
+                        android:layout_width="18dp"
+                        android:layout_height="18dp" />
+                </LinearLayout>
+            </LinearLayout>
+            <!--最新动态-->
+
+            <!--Recyclview-->
+            <androidx.recyclerview.widget.RecyclerView
+                android:nestedScrollingEnabled="false"
+                android:id="@+id/rv_dynamicstate_home"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+            </androidx.recyclerview.widget.RecyclerView>
+            <!--Recyclview-->
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:layout_marginLeft="20dp"
+    android:gravity="center"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:layout_marginRight="5dp"
+        android:id="@+id/cv_popuo__img"
+        android:layout_width="50dp"
+        android:layout_height="50dp" />
+    <TextView
+        android:layout_marginTop="5dp"
+        android:layout_marginHorizontal="3dp"
+        android:id="@+id/tv_popuo_title"
+        android:maxLines="1"
+        android:ellipsize="end"
+        android:text="我的好朋友6666"
+        android:textColor="#212121"
+        android:textSize="13sp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+    <LinearLayout
+        android:layout_marginTop="5dp"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+        <com.example.meetthebabyapp.util.MyProgressBar
+            android:layout_width="40dp"
+            android:layout_height="15dp"
+            android:id="@+id/pb_myProgressBar"
+            android:layout_centerHorizontal="true"
+            max="100"
+            progress="0"
+            type="ALERT_TYPE"></com.example.meetthebabyapp.util.MyProgressBar>
+        <TextView
+            android:id="@+id/tv_popuo_sum"
+            android:layout_marginLeft="10dp"
+            android:text="36%"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+</LinearLayout>

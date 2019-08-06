@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".activity.equipment.BindingActivity">
+    <androidx.appcompat.widget.Toolbar
+        android:fitsSystemWindows="true"
+        android:background="#F4511E"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:id="@+id/ll_return_binding"
+            android:gravity="center_vertical"
+            android:layout_width="50dp"
+            android:layout_height="50dp">
+            <ImageView
+                android:src="@mipmap/fanhui"
+                android:layout_width="16dp"
+                android:layout_height="20dp" />
+        </LinearLayout>
+        <TextView
+            android:layout_gravity="center"
+            android:text="声波联网"
+            android:textColor="#FFFFFF"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </androidx.appcompat.widget.Toolbar>
+    <LinearLayout
+        android:layout_marginTop="70dp"
+        android:gravity="center_horizontal"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:layout_marginTop="15dp"
+            android:layout_gravity="center"
+            android:text="1、请在开启语音后对设备说出“绑定设备”"
+            android:textColor="#4B4E4E"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <TextView
+            android:layout_marginTop="5dp"
+            android:layout_gravity="center"
+            android:text="将设备播报的数字填入下方"
+            android:textColor="#4B4E4E"
+            android:textSize="14sp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_marginTop="30dp"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <EditText
+            android:gravity="center"
+            android:textSize="40sp"
+            android:id="@+id/et_sum_bing1"
+            android:layout_marginRight="10dp"
+            android:background="@drawable/ll_wifi"
+            android:layout_width="80dp"
+            android:layout_height="120dp" />
+        <EditText
+            android:gravity="center"
+            android:textSize="40sp"
+            android:id="@+id/et_sum_bing2"
+            android:layout_marginRight="10dp"
+            android:background="@drawable/ll_wifi"
+            android:layout_width="80dp"
+            android:layout_height="120dp" />
+        <EditText
+            android:gravity="center"
+            android:textSize="40sp"
+            android:id="@+id/et_sum_bing3"
+            android:layout_marginRight="10dp"
+            android:background="@drawable/ll_wifi"
+            android:layout_width="80dp"
+            android:layout_height="120dp"  />
+        <EditText
+            android:gravity="center"
+            android:textSize="40sp"
+            android:id="@+id/et_sum_bing4"
+            android:background="@drawable/ll_wifi"
+            android:layout_width="80dp"
+            android:layout_height="120dp"  />
+    </LinearLayout>
+
+    <Button
+        android:visibility="gone"
+        android:id="@+id/btn_start_binding"
+        android:background="@drawable/loginbtn"
+        android:text="绑定设备"
+        android:textColor="#FFFFFF"
+        android:textSize="17sp"
+        android:layout_gravity="center"
+        android:layout_marginTop="40dp"
+        android:layout_width="320dp"
+        android:layout_height="50dp" />
+    <Button
+        android:visibility="visible"
+        android:id="@+id/btn_start_binding1"
+        android:background="@drawable/bing_bnt"
+        android:text="绑定设备"
+        android:textColor="#FFFFFF"
+        android:textSize="17sp"
+        android:layout_gravity="center"
+        android:layout_marginTop="40dp"
+        android:layout_width="320dp"
+        android:layout_height="50dp" />
+</LinearLayout>
