@@ -5,7 +5,7 @@
     <color name="colorAccent">#C09B6F</color>
     <color name="colorAccentLight">#F6F1EE</color>
     <color name="colorAccentDark">#B08F6B</color>
-<color name="texrwifi">#FF6A38</color>
+    <color name="texrwifi">#FF6A38</color>
     <color name="texrwifi1">#666666</color>
     <color name="colorBackground">#F5F5F5</color>
 
@@ -22,5 +22,13 @@
     <color name="colorTextDark">#333333</color>
 
     <color name="colorVerifyText">#491F16</color>
+
+
+    <color name="colorPlayAccent">#F4511E</color>
+    <color name="colorPlayTextAccent">#F1522C</color>
+    <color name="colorPlayPayBgStart">#631DD0</color>
+    <color name="colorPlayPayBgEnd">#8A1DD1</color>
+
+    <color name="colorMineTextAccent">#FC6230</color>
 
 </resources>

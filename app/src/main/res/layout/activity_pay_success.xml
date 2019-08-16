@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorWhite"
+    android:gravity="center_horizontal"
+    android:orientation="vertical">
+
+    <com.example.meetthebabyapp.view.StatusBarHeightView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorPlayAccent"
+        app:use_type="use_padding_top">
+
+        <ImageView
+            android:id="@+id/iv_back_pay_success"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:paddingLeft="18dp"
+            android:paddingTop="14dp"
+            android:paddingRight="21dp"
+            android:paddingBottom="14dp"
+            android:src="@mipmap/fanhui" />
+
+    </com.example.meetthebabyapp.view.StatusBarHeightView>
+
+    <ImageView
+        android:layout_width="68dp"
+        android:layout_height="68dp"
+        android:layout_marginTop="140dp"
+        android:src="@mipmap/shouyezhuanta5" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="支付成功"
+        android:textColor="@color/colorTextDark"
+        android:textSize="18sp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="36dp"
+        android:layout_marginTop="44dp"
+        android:background="@drawable/playlist_accent_stroke_btn"
+        android:gravity="center"
+        android:paddingLeft="44dp"
+        android:paddingRight="44dp"
+        android:text="返回"
+        android:textColor="@color/colorPlayAccent"
+        android:textSize="14sp" />
+
+</LinearLayout>

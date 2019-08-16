@@ -1,8 +1,6 @@
 package com.example.meetthebabyapp.activity;
 
-import android.Manifest;
 import android.content.Intent;
-import android.content.pm.PackageManager;
 import android.os.Build;
 import android.os.Bundle;
 import android.view.View;
@@ -12,16 +10,12 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import com.example.meetthebabyapp.R;
+import com.example.meetthebabyapp.activity.playlist.PlayListActivity;
+import com.example.meetthebabyapp.activity.store.BuyOrRentActivity;
 import com.example.meetthebabyapp.base.BaseActivity;
 import com.example.meetthebabyapp.fragment.HomeFragment;
-import com.example.meetthebabyapp.view.StatusBarHeightView;
-import com.example.meetthebabyapp.view.dialog.BaseNiceDialog;
-import com.example.meetthebabyapp.view.dialog.NiceDialog;
-import com.example.meetthebabyapp.view.dialog.ViewConvertListener;
-import com.example.meetthebabyapp.view.dialog.ViewHolder;
+import com.example.meetthebabyapp.fragment.MineFragment;
 
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.core.app.ActivityCompat;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
@@ -43,6 +37,7 @@ public class ContainerActivity extends BaseActivity implements View.OnClickListe
     private TextView mainTvPersonage;
     private String mtag;
     private HomeFragment homepageFragment;
+    private MineFragment mineFragment;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -78,7 +73,7 @@ public class ContainerActivity extends BaseActivity implements View.OnClickListe
         if (homepageFragment == null) {
             homepageFragment = HomeFragment.newInstance();
         }
-        showFragment(homepageFragment,"HOME");
+        showFragment(homepageFragment, "HOME");
 
     }
 
@@ -90,7 +85,7 @@ public class ContainerActivity extends BaseActivity implements View.OnClickListe
                 if (homepageFragment == null) {
                     homepageFragment = HomeFragment.newInstance();
                 }
-                showFragment(homepageFragment,"HOME");
+                showFragment(homepageFragment, "HOME");
                 mainTvHome.setSelected(true);
                 mainTvTrain.setSelected(false);
                 mainTvScan.setSelected(false);
@@ -104,6 +99,9 @@ public class ContainerActivity extends BaseActivity implements View.OnClickListe
                 mainTvScan.setSelected(false);
                 mainTvNotice.setSelected(false);
                 mainTvPersonage.setSelected(false);
+
+                //todo 暂时作为音频、绘本详情的入口
+                startActivity(new Intent(ContainerActivity.this, PlayListActivity.class));
                 break;
             case R.id.main_ll_scan:
                 //设备
@@ -112,6 +110,9 @@ public class ContainerActivity extends BaseActivity implements View.OnClickListe
                 mainTvScan.setSelected(true);
                 mainTvNotice.setSelected(false);
                 mainTvPersonage.setSelected(false);
+
+                //todo 暂时作为租、购买设备入口
+                startActivity(new Intent(ContainerActivity.this, BuyOrRentActivity.class));
                 break;
             case R.id.main_ll_notice:
                 //消息
@@ -124,6 +125,10 @@ public class ContainerActivity extends BaseActivity implements View.OnClickListe
 
             case R.id.main_ll_personage:
                 //我的
+                if (mineFragment == null) {
+                    mineFragment = MineFragment.getInstance();
+                }
+                showFragment(mineFragment, "MINE");
                 mainTvHome.setSelected(false);
                 mainTvTrain.setSelected(false);
                 mainTvScan.setSelected(false);
@@ -135,23 +140,23 @@ public class ContainerActivity extends BaseActivity implements View.OnClickListe
         }
     }
 
-    private void showFragment(Fragment fragment,String tag){
+    private void showFragment(Fragment fragment, String tag) {
 
-        if (tag.equals(mtag)){
+        if (tag.equals(mtag)) {
             return;
         }
-        FragmentTransaction fragmentTransaction=fm.beginTransaction();
-        if (mFragment!=null){
+        FragmentTransaction fragmentTransaction = fm.beginTransaction();
+        if (mFragment != null) {
             fragmentTransaction.hide(mFragment);
         }
-        if (fragment.isAdded()){
+        if (fragment.isAdded()) {
             fragmentTransaction.show(fragment);
-        }else {
-            fragmentTransaction.add(R.id.main,fragment);
+        } else {
+            fragmentTransaction.add(R.id.main, fragment);
         }
 
         fragmentTransaction.commit();
-        mFragment=fragment;
-        mtag=tag;
+        mFragment = fragment;
+        mtag = tag;
     }
 }

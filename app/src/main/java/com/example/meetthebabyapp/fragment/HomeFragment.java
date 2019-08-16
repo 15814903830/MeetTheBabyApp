@@ -17,7 +17,6 @@ import android.widget.PopupWindow;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.chad.library.adapter.base.BaseQuickAdapter;
 import com.example.meetthebabyapp.R;
 import com.example.meetthebabyapp.activity.PayHomeFragmnetActivity;
 import com.example.meetthebabyapp.activity.dynamic.MoreActivity;
@@ -195,7 +194,7 @@ public class HomeFragment extends Fragment implements View.OnClickListener, PoPu
 
     private void initAdapter(List<MyMultipleItem> basedast) {
         //创建适配器
-        adapter = new MultipleItemAdapter(basedast,"1");
+        adapter = new MultipleItemAdapter(basedast, "1");
         //给RecyclerView设置适配器
         rvDynamicstateHome.setAdapter(adapter);
         adapter.bindToRecyclerView(rvDynamicstateHome);
@@ -224,7 +223,7 @@ public class HomeFragment extends Fragment implements View.OnClickListener, PoPu
         mMZBanner.addPageChangeListener(new ViewPager.OnPageChangeListener() {
             @Override
             public void onPageScrolled(int position, float positionOffset, int positionOffsetPixels) {
-                Log.e(TAG, "----->addPageChangeLisnter:" + position + "positionOffset:" + positionOffset + "positionOffsetPixels:" + positionOffsetPixels);
+
             }
 
             @Override
@@ -347,7 +346,7 @@ public class HomeFragment extends Fragment implements View.OnClickListener, PoPu
                 //温馨提醒去绑定设备
                 break;
             case R.id.ll_getmore_home://更多动态
-                Intent intent=new Intent(getContext(), MoreActivity.class);
+                Intent intent = new Intent(getContext(), MoreActivity.class);
                 startActivity(intent);
                 break;
 

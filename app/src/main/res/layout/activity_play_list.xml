@@ -1,0 +1,199 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorWhite"
+    android:orientation="vertical">
+
+    <com.example.meetthebabyapp.view.StatusBarHeightView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorPlayAccent"
+        app:use_type="use_padding_top">
+
+        <ImageView
+            android:id="@+id/iv_back_playlist"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:paddingLeft="18dp"
+            android:paddingTop="14dp"
+            android:paddingRight="21dp"
+            android:paddingBottom="14dp"
+            android:src="@mipmap/fanhui" />
+
+        <TextView
+            android:id="@+id/tv_title_playlist"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:layout_marginLeft="48dp"
+            android:layout_marginRight="48dp"
+            android:gravity="center"
+            android:text="音频详情"
+            android:textColor="@color/colorWhite"
+            android:textSize="18sp" />
+
+    </com.example.meetthebabyapp.view.StatusBarHeightView>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="137dp"
+                android:padding="15dp">
+
+                <ImageView
+                    android:id="@+id/iv_playlist"
+                    android:layout_width="107dp"
+                    android:layout_height="107dp"
+                    android:scaleType="centerCrop"
+                    android:src="@mipmap/homeitemimg" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignTop="@id/iv_playlist"
+                    android:layout_marginLeft="15dp"
+                    android:layout_toRightOf="@id/iv_playlist"
+                    android:ellipsize="end"
+                    android:maxLines="3"
+                    android:text="青蛙讲故事"
+                    android:textColor="@color/colorTextDark"
+                    android:textSize="16sp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBottom="@id/iv_playlist"
+                    android:layout_marginLeft="15dp"
+                    android:layout_toRightOf="@id/iv_playlist"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="14dp"
+                        android:layout_height="14dp"
+                        android:src="@mipmap/shangcheng1" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:layout_weight="1"
+                        android:text="128"
+                        android:textColor="@color/colorPlayAccent"
+                        android:textSize="16sp"
+                        android:textStyle="bold" />
+
+                    <ImageView
+                        android:layout_width="24dp"
+                        android:layout_height="22dp"
+                        android:src="@drawable/playlist_red_heart" />
+
+                </LinearLayout>
+
+            </RelativeLayout>
+
+            <com.example.meetthebabyapp.view.CustomBgTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginRight="15dp"
+                android:text="简介"
+                android:textColor="@color/colorTextDark"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="14dp"
+                android:layout_marginRight="15dp"
+                android:lineSpacingMultiplier="1.6"
+                android:text="北美洲的古老森林,神秘而又充满野性。这里隐藏了一个不可思议的美妙世界，小女孩Abbey某天误入了森林里，并就此展开了一场奇妙之旅..."
+                android:textColor="#ff666666"
+                android:textSize="15sp" />
+
+            <com.example.meetthebabyapp.view.CustomBgTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="35dp"
+                android:layout_marginRight="15dp"
+                android:text="目录"
+                android:textColor="@color/colorTextDark"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rv_playlist"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="30dp"
+                android:layout_marginBottom="30dp"
+                android:text="已经到底啦~"
+                android:textColor="@color/colorTextLight"
+                android:textSize="13sp" />
+
+        </LinearLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:background="@color/colorLine"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/tv_price_playlist"
+            android:layout_width="0dp"
+            android:layout_height="54dp"
+            android:layout_gravity="bottom"
+            android:layout_weight="6"
+            android:background="@color/colorWhite"
+            android:gravity="center"
+            android:textColor="@color/colorTextDark"
+            android:textSize="13sp" />
+
+        <LinearLayout
+            android:id="@+id/ll_pay_order_playlist"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="7"
+            android:background="@drawable/playlist_pay_bg"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="19dp"
+                android:layout_height="19dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:text="支付下单"
+                android:textColor="@color/colorWhite"
+                android:textSize="17sp" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

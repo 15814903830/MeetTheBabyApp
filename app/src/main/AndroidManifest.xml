@@ -15,7 +15,10 @@
         android:supportsRtl="true"
         android:theme="@style/TranslucentStatusTheme"
         android:usesCleartextTraffic="true">
-        <activity android:name=".activity.dynamic.PublishActivity"></activity>
+        <activity android:name=".activity.store.BuyOrRentActivity"></activity>
+        <activity android:name=".activity.playlist.PaySuccessActivity" />
+        <activity android:name=".activity.playlist.PlayListActivity" />
+        <activity android:name=".activity.dynamic.PublishActivity" />
         <activity android:name=".activity.dynamic.PersonagerDynamicActivity" />
         <activity android:name=".activity.dynamic.MoreActivity" />
         <activity android:name=".activity.dynamic.PersonageActivity" />
