@@ -14,20 +14,6 @@ public class HomeFragmnetRecyclViewBase {
         return islove;
     }
 
-    @Override
-    public String toString() {
-        return "HomeFragmnetRecyclViewBase{" +
-                "islove=" + islove +
-                ", headimgurl='" + headimgurl + '\'' +
-                ", name='" + name + '\'' +
-                ", time='" + time + '\'' +
-                ", content='" + content + '\'' +
-                ", imgList=" + imgList +
-                ", loveList=" + loveList +
-                ", mCommentBaseList=" + mCommentBaseList +
-                '}';
-    }
-
     public void setIslove(boolean islove) {
         this.islove = islove;
     }
@@ -40,6 +26,34 @@ public class HomeFragmnetRecyclViewBase {
     private List<String> imgList;//配图集合
     private List<String> loveList;//点赞集合
     private List<CommentBase> mCommentBaseList;//评论集合
+    private int id;
+
+    @Override
+    public String toString() {
+        return "HomeFragmnetRecyclViewBase{" +
+                "islove=" + islove +
+                ", headimgurl='" + headimgurl + '\'' +
+                ", name='" + name + '\'' +
+                ", time='" + time + '\'' +
+                ", content='" + content + '\'' +
+                ", imgList=" + imgList +
+                ", loveList=" + loveList +
+                ", mCommentBaseList=" + mCommentBaseList +
+                ", id=" + id +
+                '}';
+    }
+
+    public boolean isIslove() {
+        return islove;
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
 
     public String getHeadimgurl() {
         return headimgurl;

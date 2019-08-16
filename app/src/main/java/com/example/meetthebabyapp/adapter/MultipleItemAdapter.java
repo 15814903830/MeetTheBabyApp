@@ -107,7 +107,8 @@ public class MultipleItemAdapter extends BaseMultiItemQuickAdapter<MyMultipleIte
                 delete.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View view) {
-                        Toast.makeText(mContext, "删除", Toast.LENGTH_SHORT).show();//未处理
+                        Toast.makeText(mContext,"删除"+item.getData().getId(), Toast.LENGTH_SHORT).show();
+                        Log.e("删除",""+item.getData().getId());
                     }
                 });
 

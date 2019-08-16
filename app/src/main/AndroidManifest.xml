@@ -15,7 +15,8 @@
         android:supportsRtl="true"
         android:theme="@style/TranslucentStatusTheme"
         android:usesCleartextTraffic="true">
-        <activity android:name=".activity.dynamic.PersonagerDynamicActivity"></activity>
+        <activity android:name=".activity.dynamic.PublishActivity"></activity>
+        <activity android:name=".activity.dynamic.PersonagerDynamicActivity" />
         <activity android:name=".activity.dynamic.MoreActivity" />
         <activity android:name=".activity.dynamic.PersonageActivity" />
         <activity android:name=".activity.dynamic.ParticularsActivity" />

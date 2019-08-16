@@ -84,6 +84,7 @@ public class PersonagerDynamicActivity extends AppCompatActivity implements View
         homeFragmnetRecyclViewBase.setName("张三");//名字
         homeFragmnetRecyclViewBase.setTime("一小时前");//时间
         homeFragmnetRecyclViewBase.setIslove(true);
+        homeFragmnetRecyclViewBase.setId(1);
         lovelist.add("李四");//点赞
         lovelist.add("李四");//点赞
         lovelist.add("李四");//点赞
@@ -119,6 +120,7 @@ public class PersonagerDynamicActivity extends AppCompatActivity implements View
         homeFragmnetRecyclViewBase2.setName("张三22");//名字
         homeFragmnetRecyclViewBase2.setTime("10小时前");//时间
         homeFragmnetRecyclViewBase2.setIslove(false);
+        homeFragmnetRecyclViewBase2.setId(2);
         lovelist1.add("李四");//点赞
         homeFragmnetRecyclViewBase2.setLoveList(lovelist1);
         homeFragmnetRecyclViewBase2.setHeadimgurl("https://ss3.bdstatic.com/70cFv8Sh_Q1YnxGkpoWK1HF6hhy/it/u=4259300811,497831842&fm=26&gp=0.jpg");//头像
@@ -140,8 +142,6 @@ public class PersonagerDynamicActivity extends AppCompatActivity implements View
         mhomelist.add(homeFragmnetRecyclViewBase);
         mhomelist2.add(homeFragmnetRecyclViewBase2);
 
-        dast.add(new MyMultipleItem(MyMultipleItem.FIRST_TYPE, mhomelist.get(0)));
-        dast.add(new MyMultipleItem(MyMultipleItem.FIRST_TYPE, mhomelist2.get(0)));
         dast.add(new MyMultipleItem(MyMultipleItem.FIRST_TYPE, mhomelist.get(0)));
         dast.add(new MyMultipleItem(MyMultipleItem.FIRST_TYPE, mhomelist2.get(0)));
         initAdapter(dast);
