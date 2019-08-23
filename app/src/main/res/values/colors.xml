@@ -31,4 +31,7 @@
 
     <color name="colorMineTextAccent">#FC6230</color>
 
+    <color name="colorRechargeBgStart">#F44336</color>
+    <color name="colorRechargeBgEnd">#EC407A</color>
+
 </resources>
